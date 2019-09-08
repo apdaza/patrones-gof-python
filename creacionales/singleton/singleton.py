@@ -1,7 +1,9 @@
-class Singlethon():
-    __instance__ = None
+class Singleton():
 
-    def __new__(cls):
-        if cls.__instance__ is None:
-            cls.__instance__ = super(SingletonIfNone, cls).__new__(cls)
-        return cls.__instance__
+    _instance = None
+
+    @classmethod
+    def get_instance(cls): # Constructor alternativo que retorna una nueva instancia
+        if not cls._instance:
+            cls._instance = cls()
+        return cls._instance

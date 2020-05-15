@@ -6,13 +6,20 @@ from fabricas import *
 class EjemploAbstractFactory:
 
     def operacion(self):
-        print "Ejemplo Abstract Factory"
-        print "seleccione una fabrica: \n\t 0 - AMD \n\t 1 - Intel "
-        fabricas = [FabricaAMD(), FabricaIntel()]
+        print("Ejemplo Abstract Factory")
+        print("seleccione una fabrica: \n\t 0 - AMD \n\t 1 - Intel \n\t 2 - Alien ")
+        fabricas = [FabricaAMD(), FabricaIntel(), FabricaAlien()]
 
-        fabrica = fabricas[input()]
+        fabrica = fabricas[int(input())]
 
         partes = [fabrica.crearMemoria(), fabrica.crearProcesador(), fabrica.crearBoard()]
 
         for p in partes:
-            print p.operacion()
+            p.implementacion()
+            
+            print(p.operacion())
+
+
+ejemplo = EjemploAbstractFactory()
+
+ejemplo.operacion()

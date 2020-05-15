@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from creacionales.singleton.ejemplo_singleton import EjemploSingleton
 from creacionales.abstract_factory.ejemplo_abstract_factory import EjemploAbstractFactory
 
 def obtener_patron(opcion):
-    patrones = [EjemploSingleton(),EjemploAbstractFactory()]
+    patrones = [EjemploAbstractFactory()]
     return patrones[opcion]
 
 

@@ -1,20 +1,23 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from abc import ABC, abstractmethod
+
 from productos import *
 
-class FabricaAbstracta:
+class FabricaAbstracta(ABC):
 
+    @abstractmethod
     def crearMemoria(self):
         pass
-
+    @abstractmethod
     def crearProcesador(self):
         pass
-
+    @abstractmethod
     def crearBoard(self):
         pass
 
-class FabricaAMD:
+class FabricaAMD(FabricaAbstracta):
 
     def crearMemoria(self):
         return MemoriaAMD()
@@ -25,7 +28,7 @@ class FabricaAMD:
     def crearBoard(self):
         return BoardAMD()
 
-class FabricaIntel:
+class FabricaIntel(FabricaAbstracta):
 
     def crearMemoria(self):
         return MemoriaIntel()
@@ -35,3 +38,14 @@ class FabricaIntel:
 
     def crearBoard(self):
         return BoardIntel()
+
+class FabricaAlien(FabricaAbstracta):
+
+    def crearMemoria(self):
+        return MemoriaAlien()
+
+    def crearProcesador(self):
+        return ProcesadorAlien()
+
+    def crearBoard(self):
+        return BoardAlien()

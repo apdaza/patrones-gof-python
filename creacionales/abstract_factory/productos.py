@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 class Memoria(ABC):
     def implementacion(self):
-        print("implementando memoria")
+        print("instalando memoria")
 
     @abstractmethod
     def operacion(self):
@@ -12,7 +12,7 @@ class Memoria(ABC):
 
 class Board(ABC):
     def implementacion(self):
-        print("implementando board")
+        print("instalando board")
 
     @abstractmethod
     def operacion(self):
@@ -20,7 +20,7 @@ class Board(ABC):
 
 class Procesador(ABC):
     def implementacion(self):
-        print("implementando procesador")
+        print("instalando procesador")
 
     @abstractmethod
     def operacion(self):

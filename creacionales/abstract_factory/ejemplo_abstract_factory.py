@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from fabricas import *
+from .fabricas import *
 
 class EjemploAbstractFactory:
+    def obtener_nombre(self):
+        return "AbstractFactory"
 
     def operacion(self):
         print("Ejemplo Abstract Factory")
@@ -16,10 +18,4 @@ class EjemploAbstractFactory:
 
         for p in partes:
             p.implementacion()
-            
-            print(p.operacion())
-
-
-ejemplo = EjemploAbstractFactory()
-
-ejemplo.operacion()
+            p.operacion()

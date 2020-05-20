@@ -2,14 +2,17 @@
 # -*- coding: utf-8 -*-
 
 from creacionales.abstract_factory.ejemplo_abstract_factory import EjemploAbstractFactory
-
-def obtener_patron(opcion):
-    patrones = [EjemploAbstractFactory()]
-    return patrones[opcion]
+from creacionales.singleton.ejemplo_singleton import EjemploSingleton
 
 
 if __name__ == '__main__':
-    opcion = input("Ingrese una opcion: ")
+    patrones = [EjemploSingleton(), EjemploAbstractFactory()]
+    cont = 0
+    for p in patrones:
+        print(str(cont) + " -> " + p.obtener_nombre())
+        cont += 1
 
-    ejemplo = obtener_patron(opcion)
+    opcion = int(input("Ingrese una opcion: "))
+
+    ejemplo = patrones[opcion]
     ejemplo.operacion()

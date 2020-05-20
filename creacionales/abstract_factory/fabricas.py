@@ -3,7 +3,7 @@
 
 from abc import ABC, abstractmethod
 
-from productos import *
+from .productos import *
 
 class FabricaAbstracta(ABC):
 

@@ -9,4 +9,9 @@ class EjemploSingleton:
         x = Singleton.get_instance()
         y = Singleton.get_instance()
 
+
         print( x is y)
+
+        y.set_value(10)
+
+        print(x.get_value())

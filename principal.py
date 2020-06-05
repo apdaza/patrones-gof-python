@@ -3,10 +3,11 @@
 
 from creacionales.abstract_factory.ejemplo_abstract_factory import EjemploAbstractFactory
 from creacionales.singleton.ejemplo_singleton import EjemploSingleton
+from creacionales.prototype.ejemplo_prototype import EjemploPrototype
 
 
 if __name__ == '__main__':
-    patrones = [EjemploSingleton(), EjemploAbstractFactory()]
+    patrones = [EjemploSingleton(), EjemploAbstractFactory(), EjemploPrototype()]
     cont = 0
     for p in patrones:
         print(str(cont) + " -> " + p.obtener_nombre())

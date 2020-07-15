@@ -8,11 +8,16 @@ from estructurales.adapter.ejemplo_adapter import EjemploAdapter
 from estructurales.bridge.ejemplo_bridge import EjemploBridge
 from estructurales.Composite.ejemplo_composite import EjemploComposite
 from estructurales.decorator.ejemplo_decorator import EjemploDecorator
+from estructurales.proxy.ejemplo_proxy import EjemploProxy
+from estructurales.fachada.ejemplo_fachada import EjemploFachada
+from estructurales.flyweight.ejemplo_flyweight import EjemploFlyweight
 
 
 if __name__ == '__main__':
     patrones = [EjemploSingleton(), EjemploAbstractFactory(), EjemploPrototype(), 
-                EjemploAdapter(), EjemploBridge(), EjemploComposite(), EjemploDecorator()]
+                EjemploAdapter(), EjemploBridge(), EjemploComposite(), 
+                EjemploDecorator(), EjemploProxy(), EjemploFachada(),
+                EjemploFlyweight()]
     cont = 0
     for p in patrones:
         print(str(cont) + " -> " + p.obtener_nombre())

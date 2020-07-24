@@ -11,13 +11,17 @@ from estructurales.decorator.ejemplo_decorator import EjemploDecorator
 from estructurales.proxy.ejemplo_proxy import EjemploProxy
 from estructurales.fachada.ejemplo_fachada import EjemploFachada
 from estructurales.flyweight.ejemplo_flyweight import EjemploFlyweight
+from comportamiento.chain_of_resposability.ejemplo_cadena import EjemploCadena
+from comportamiento.command.ejemplo_command import EjemploCommand
+from comportamiento.interpreter.ejemplo_interpreter import EjemploInterpreter
 
 
 if __name__ == '__main__':
     patrones = [EjemploSingleton(), EjemploAbstractFactory(), EjemploPrototype(), 
                 EjemploAdapter(), EjemploBridge(), EjemploComposite(), 
                 EjemploDecorator(), EjemploProxy(), EjemploFachada(),
-                EjemploFlyweight()]
+                EjemploFlyweight(), EjemploCadena(), EjemploCommand(),
+                EjemploInterpreter()]
     cont = 0
     for p in patrones:
         print(str(cont) + " -> " + p.obtener_nombre())

@@ -6,7 +6,7 @@ class Flyweight:
 class ConcreteFlyweight(Flyweight):
 
     def operacion(self):
-        return "Operación del peso ligero concreto "
+        return "Operación del peso ligero concreto clear"
 
 class UnshareFlyweight(Flyweight):
 

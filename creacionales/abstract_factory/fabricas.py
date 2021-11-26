@@ -3,7 +3,7 @@
 
 from abc import ABC, abstractmethod
 
-from .productos import *
+from productos import *
 
 class FabricaAbstracta(ABC):
 
@@ -17,6 +17,10 @@ class FabricaAbstracta(ABC):
     def crearBoard(self):
         pass
 
+    @abstractmethod
+    def crearCooler(self):
+        pass
+
 class FabricaAMD(FabricaAbstracta):
 
     def crearMemoria(self):
@@ -27,6 +31,9 @@ class FabricaAMD(FabricaAbstracta):
 
     def crearBoard(self):
         return BoardAMD()
+
+    def crearCooler(self):
+        return CoolerAMD()
 
 class FabricaIntel(FabricaAbstracta):
 
@@ -39,6 +46,9 @@ class FabricaIntel(FabricaAbstracta):
     def crearBoard(self):
         return BoardIntel()
 
+    def crearCooler(self):
+        return CoolerIntel()
+
 class FabricaAlien(FabricaAbstracta):
 
     def crearMemoria(self):
@@ -49,3 +59,34 @@ class FabricaAlien(FabricaAbstracta):
 
     def crearBoard(self):
         return BoardAlien()
+    
+    def crearCooler(self):
+        return CoolerAlien()
+
+class FabricaUD(FabricaAbstracta):
+
+    def crearMemoria(self):
+        return MemoriaUD()
+
+    def crearProcesador(self):
+        return ProcesadorUD()
+
+    def crearBoard(self):
+        return BoardUD()
+
+    def crearCooler(self):
+        return CoolerUD()
+
+class FabricaFusion(FabricaAbstracta):
+
+    def crearMemoria(self):
+        return MemoriaFusion()
+
+    def crearProcesador(self):
+        return ProcesadorFusion()
+
+    def crearBoard(self):
+        return BoardFusion()
+
+    def crearCooler(self):
+        return CoolerFusion()

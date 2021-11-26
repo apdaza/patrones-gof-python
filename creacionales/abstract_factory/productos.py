@@ -26,6 +26,14 @@ class Procesador(ABC):
     def operacion(self):
         pass
 
+class Cooler(ABC):
+    def implementacion(self):
+        print("instalando cooler")
+
+    @abstractmethod
+    def operacion(self):
+        pass
+
 class MemoriaAMD(Memoria):
 
     def operacion(self):
@@ -40,6 +48,11 @@ class ProcesadorAMD(Procesador):
 
     def operacion(self):
         print("operando procesador AMD")
+
+class CoolerAMD(Cooler):    
+
+    def operacion(self):
+        print("operando cooler AMD")
 
 class MemoriaIntel(Memoria):
 
@@ -56,6 +69,11 @@ class ProcesadorIntel(Procesador):
     def operacion(self):
         print("operando procesador Intel")
 
+class CoolerIntel(Cooler):
+
+    def operacion(self):
+        print("operando cooler Intel")
+
 class MemoriaAlien(Memoria):
 
     def operacion(self):
@@ -70,3 +88,48 @@ class ProcesadorAlien(Procesador):
     
     def operacion(self):
         print("operando procesador Alien")
+
+class CoolerAlien(Cooler):
+
+    def operacion(self):
+        print("operando cooler Alien")
+
+class MemoriaUD(Memoria):
+
+    def operacion(self):
+        print("operando memoria UD")
+
+class BoardUD(Board):
+
+    def operacion(self):
+        print("operando board UD")
+
+class ProcesadorUD(Procesador):
+    
+    def operacion(self):
+        print("operando procesador UD")
+
+class CoolerUD(Cooler):
+
+    def operacion(self):
+        print("operando cooler UD")
+
+class MemoriaFusion(Memoria):
+
+    def operacion(self):
+        print("operando memoria Fusion")
+
+class BoardFusion(Board):
+    
+    def operacion(self):
+        print("operando board Fusion")
+
+class ProcesadorFusion(Procesador):
+    
+    def operacion(self):
+        print("operando procesador Fusion")
+
+class CoolerFusion(Cooler):
+    
+    def operacion(self):
+        print("operando cooler Fusion")

@@ -90,3 +90,17 @@ class FabricaFusion(FabricaAbstracta):
 
     def crearCooler(self):
         return CoolerFusion()
+
+class FabricaRazer(FabricaAbstracta):
+
+    def crearMemoria(self):
+        return MemoriaRazer()
+    
+    def crearProcesador(self):
+        return ProcesadorRazer()
+
+    def crearBoard(self):
+        return BoardRazer()
+
+    def crearCooler(self):
+        return CoolerRazer()

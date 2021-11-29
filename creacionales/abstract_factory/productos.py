@@ -133,3 +133,23 @@ class CoolerFusion(Cooler):
     
     def operacion(self):
         print("operando cooler Fusion")
+
+class MemoriaRazer(Memoria):
+
+    def operacion(self):
+        print("operando memoria Razer")
+
+class BoardRazer(Board):
+
+    def operacion(self):    
+        print("operando board Razer")
+
+class ProcesadorRazer(Procesador):
+
+    def operacion(self):
+        print("operando procesador Razer")
+
+class CoolerRazer(Cooler):
+
+    def operacion(self):
+        print("operando cooler Razer")

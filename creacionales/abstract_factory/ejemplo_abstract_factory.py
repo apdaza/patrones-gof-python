@@ -14,8 +14,11 @@ class EjemploAbstractFactory:
               "1 - Intel \n\t " +
               "2 - Alien \n\t " +
               "3 - UD \n\t " +
-              "4 - Fusion ")
-        fabricas = [FabricaAMD(), FabricaIntel(), FabricaAlien(), FabricaUD(), FabricaFusion()]
+              "4 - Fusion \n\t " +
+              "5 - Razer ")
+        fabricas = [FabricaAMD(), FabricaIntel(), 
+                    FabricaAlien(), FabricaUD(), 
+                    FabricaFusion(), FabricaRazer()]
 
         fabrica = fabricas[int(input())]
 

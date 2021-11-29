@@ -1,4 +1,4 @@
-from .singleton import Singleton
+from singleton import Singleton
 
 class EjemploSingleton:
     def obtener_nombre(self):
@@ -15,3 +15,7 @@ class EjemploSingleton:
         y.set_value(10)
 
         print(x.get_value())
+
+if __name__ == "__main__":
+    ejemplo = EjemploSingleton()
+    ejemplo.operacion()

@@ -3,6 +3,7 @@
 
 from creacionales.abstract_factory.ejemplo_abstract_factory import EjemploAbstractFactory
 from creacionales.singleton.ejemplo_singleton import EjemploSingleton
+from creacionales.factory_method.ejemplo_factory_method import EjemploFactoryMethod
 from creacionales.prototype.ejemplo_prototype import EjemploPrototype
 from estructurales.adapter.ejemplo_adapter import EjemploAdapter
 from estructurales.bridge.ejemplo_bridge import EjemploBridge
@@ -17,7 +18,8 @@ from comportamiento.interpreter.ejemplo_interpreter import EjemploInterpreter
 
 
 if __name__ == '__main__':
-    patrones = [EjemploSingleton(), EjemploAbstractFactory(), EjemploPrototype(), 
+    patrones = [EjemploSingleton(), EjemploAbstractFactory(), 
+                EjemploFactoryMethod(), EjemploPrototype(), 
                 EjemploAdapter(), EjemploBridge(), EjemploComposite(), 
                 EjemploDecorator(), EjemploProxy(), EjemploFachada(),
                 EjemploFlyweight(), EjemploCadena(), EjemploCommand(),
